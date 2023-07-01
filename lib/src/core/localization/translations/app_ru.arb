@@ -1,0 +1,10 @@
+{
+  "appTitle": "Holeo",
+  "@appTitle": {
+    "description": "Название приложения"
+  },
+  "helloName": "Привет, {value}!",
+  "@sampleHelloName": {
+    "description": "Sample hello with value"
+  }
+}
