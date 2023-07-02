@@ -135,5 +135,8 @@ build/
 generated_*
 lib/src/core/assets/generated/
 
-pubspec.lock
+# Env
+.env
+.env.dev
+.env.staging
 .metadata

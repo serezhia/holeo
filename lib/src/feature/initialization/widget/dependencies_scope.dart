@@ -43,3 +43,7 @@ class DependenciesScope extends InheritedWidget
   @override
   bool updateShouldNotify(DependenciesScope oldWidget) => false;
 }
+
+extension DependenciesX on BuildContext {
+  Dependencies get dependencies => DependenciesScope.dependenciesOf(this);
+}

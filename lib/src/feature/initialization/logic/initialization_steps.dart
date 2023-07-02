@@ -1,7 +1,8 @@
 import 'dart:async';
-
 import 'package:holeo/src/feature/initialization/model/dependencies.dart';
 import 'package:holeo/src/feature/initialization/model/initialization_progress.dart';
+import 'package:holeo/src/feature/sample/repositoris/camera_repository.dart';
+import 'package:l/l.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 typedef StepAction = FutureOr<void>? Function(InitializationProgress progress);
@@ -12,9 +13,12 @@ typedef StepAction = FutureOr<void>? Function(InitializationProgress progress);
 /// set the dependency, and the next step to use it.
 mixin InitializationSteps {
   final initializationSteps = <String, StepAction>{
+    'Init env': (progress) => l.d(progress.environmentStore.environment),
     'Shared Preferences': (progress) async {
       final sharedPreferences = await SharedPreferences.getInstance();
       progress.dependencies.sharedPreferences = sharedPreferences;
     },
+    'Camera repository': (progress) =>
+        progress.dependencies.cameraRepository = CameraRepository(),
   };
 }

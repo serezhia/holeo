@@ -1,9 +1,13 @@
+import 'package:holeo/src/feature/sample/repositoris/camera_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Dependencies container
 abstract interface class Dependencies {
   /// Shared preferences
   abstract final SharedPreferences sharedPreferences;
+
+  // Repo for work with camera
+  abstract final CameraRepository cameraRepository;
 
   /// Freeze dependencies, so they cannot be modified
   Dependencies freeze();
@@ -17,10 +21,13 @@ final class Dependencies$Mutable implements Dependencies {
 
   @override
   late SharedPreferences sharedPreferences;
+  @override
+  late CameraRepository cameraRepository;
 
   @override
   Dependencies freeze() => _Dependencies$Immutable(
         sharedPreferences: sharedPreferences,
+        cameraRepository: cameraRepository,
       );
 }
 
@@ -30,10 +37,14 @@ final class Dependencies$Mutable implements Dependencies {
 final class _Dependencies$Immutable implements Dependencies {
   const _Dependencies$Immutable({
     required this.sharedPreferences,
+    required this.cameraRepository,
   });
 
   @override
   final SharedPreferences sharedPreferences;
+
+  @override
+  final CameraRepository cameraRepository;
 
   @override
   Dependencies freeze() => this;

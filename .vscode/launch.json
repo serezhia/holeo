@@ -10,7 +10,9 @@
       "type": "dart",
       "args": [
         "--flavor",
-        "dev"
+        "dev",
+        "--dart-define=env=dev",
+        "--dart-define=sentry_dns=https://example,com",
       ]
     },
     {
@@ -20,7 +22,8 @@
       "flutterMode": "profile",
       "args": [
         "--flavor",
-        "dev"
+        "dev",
+        "--dart-define=env=dev",
       ]
     },
     {
@@ -30,7 +33,8 @@
       "flutterMode": "release",
       "args": [
         "--flavor",
-        "dev"
+        "dev",
+        "--dart-define=env=dev",
       ]
     },
     {
@@ -39,7 +43,8 @@
       "type": "dart",
       "args": [
         "--flavor",
-        "stag"
+        "stag",
+        "--dart-define=env=stag",
       ]
     },
     {
@@ -49,7 +54,8 @@
       "flutterMode": "profile",
       "args": [
         "--flavor",
-        "stag"
+        "stag",
+        "--dart-define=env=stag",
       ]
     },
     {
@@ -59,7 +65,8 @@
       "flutterMode": "release",
       "args": [
         "--flavor",
-        "stag"
+        "stag",
+        "--dart-define=env=stag",
       ]
     },
     {
@@ -68,7 +75,8 @@
       "type": "dart",
       "args": [
         "--flavor",
-        "prod"
+        "prod",
+        "--dart-define=env=prod",
       ]
     },
     {
@@ -78,7 +86,8 @@
       "flutterMode": "profile",
       "args": [
         "--flavor",
-        "prod"
+        "prod",
+        "--dart-define=env=prod",
       ]
     },
     {
@@ -88,7 +97,8 @@
       "flutterMode": "release",
       "args": [
         "--flavor",
-        "prod"
+        "prod",
+        "--dart-define=env=prod",
       ]
     },
   ]

@@ -17,6 +17,10 @@ dependencies:
   async: ^2.11.0
   meta: ^1.9.1
 
+  # Permissions
+  permission_handler: 10.4.1
+  app_settings: 4.2.0
+
   # Localization
   intl: ^0.18.0
   flutter_localizations:
@@ -33,14 +37,15 @@ dependencies:
   go_router: 9.0.0
 
   # Firebase
-  firebase_analytics: 10.4.2
-  firebase_core: 2.14.0
+  # firebase_analytics: 10.4.2
+  # firebase_core: 2.14.0
 
   # Persisting
   shared_preferences: 2.1.2
 
   # Codegen annotations
   json_annotation: 4.8.1
+  freezed_annotation: 2.2.0
 
   # Logging
   stack_trace: 1.11.0
@@ -51,6 +56,7 @@ dependencies:
   sizzle_lints: 1.0.10
 
   # Utils
+  camera: 0.10.5+2
   pure: 0.2.0
   platform_info: 4.0.0
   bloc_concurrency: 0.2.2
@@ -70,9 +76,9 @@ dev_dependencies:
     sdk: flutter
 
   # Codegen
+  freezed: 2.3.5
   json_serializable: 6.7.0
   build_runner: 2.4.5
-  auto_route_generator: 7.1.1
 
   # Utils
   flutter_launcher_icons: 0.13.1

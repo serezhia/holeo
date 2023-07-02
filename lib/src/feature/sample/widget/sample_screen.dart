@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:holeo/src/core/utils/extensions/context_extension.dart';
 
 class SampleScreen extends StatelessWidget {
@@ -9,12 +10,21 @@ class SampleScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(context.stringOf().appTitle),
         ),
-        body: Column(
-          children: [
-            Text(
-              context.stringOf().helloName('serezhia'),
-            ),
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                context.stringOf().helloName('serezhia'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  GoRouter.of(context).push('/camera');
+                },
+                child: const Text('Go to camera'),
+              )
+            ],
+          ),
         ),
       );
 }
